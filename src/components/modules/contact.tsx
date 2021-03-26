@@ -31,15 +31,15 @@ export const Contact: React.FC<IContact> = ({}) => {
           text="Get in touch"
         />
       </div>
-      <Break mt={12} />
+      <Break mt={10} mb={6} />
       <footer className="font-medium text-sm sm:text-base flex justify-between flex-wrap">
-        <div className="flex items-center space-x-6 tracking-wide mt-6">
+        <div className="flex items-center space-x-6 tracking-wide">
           <Link href="https://www.instagram.com/andreasgunnahr/">
             Instagram
           </Link>
           <Link href="https://github.com/AndreasGunnahr">Github</Link>
         </div>
-        <span className="mt-6">&copy;2021 Andreas Gunnahr</span>
+        <span>&copy;2021 Andreas Gunnahr</span>
       </footer>
     </section>
   );
