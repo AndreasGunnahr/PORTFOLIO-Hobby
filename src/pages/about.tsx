@@ -8,9 +8,9 @@ import { Contact, Layout, Timeline } from "components/modules";
 import { getSingleMatterFile } from "lib/markdown";
 // import Image from "next/image";
 
-export default function About({ content }) {
+export default function About({ seo, content }) {
   return (
-    <Layout pageTitle="About" description="About page">
+    <Layout seo={seo.about}>
       <section className="grid grid-cols-1 pt-10 px-6 max-w-screen-desktop mx-auto md:px-12 md:pt-14">
         {/* <div className="mb-8">
           <Image
@@ -77,10 +77,12 @@ export default function About({ content }) {
 
 export async function getStaticProps(context) {
   const content = await getSingleMatterFile("about");
+  const seo = await getSingleMatterFile("seo");
 
   return {
     props: {
       content,
+      seo,
     },
   };
 }

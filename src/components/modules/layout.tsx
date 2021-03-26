@@ -5,11 +5,14 @@ import { useState } from "react";
 
 interface ILayout {
   children: JSX.Element | JSX.Element[];
-  pageTitle: string;
-  description: string;
+  seo: {
+    title: string;
+    description: string;
+    url: string;
+  };
 }
 
-export const Layout: React.FC<ILayout> = ({ children, ...rest }) => {
+export const Layout: React.FC<ILayout> = ({ children, seo }) => {
   const [open, setOpen] = useState<boolean>(false);
 
   const handleResize = () => {
@@ -29,7 +32,7 @@ export const Layout: React.FC<ILayout> = ({ children, ...rest }) => {
 
   return (
     <div>
-      <SEO {...rest} />
+      <SEO {...seo} />
       <Navbar open={open} onToggle={() => setOpen(!open)} />
       <main className="pb-6">{children}</main>
       <Sidebar open={open}>
