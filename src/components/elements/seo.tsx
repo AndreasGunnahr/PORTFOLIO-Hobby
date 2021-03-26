@@ -30,16 +30,16 @@ export const SEO: React.FC<ISeo> = ({ title, description, url }) => {
         ></link>
 
         {/* Twitter */}
-        {/* <meta
+        <meta
           name="twitter:title"
           content="Fullstack Developer - Andreas Gunnahr - Sweden"
         />
         <meta
           name="twitter:description"
           content={
-            "Fullstack developer located in Sweden. I like building complex web applications and delve into new technologies. I find the whole Javascript stack extremely exciting and I believe that's where I can offer my knowledge. I also have a deep desire to excel and continuously improve my work."
+            "Fullstack developer located in Sweden. I like building complex web applications and delve into new technologies."
           }
-        /> */}
+        />
 
         {/* Open Graph
         <meta property="og:url" content={currentURL} key="ogurl" />
