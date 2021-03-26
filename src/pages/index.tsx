@@ -14,7 +14,7 @@ export default function Home({ recentProjects, content, seo }) {
   const scrollRef = useRef(null);
 
   return (
-    <Layout seo={seo}>
+    <Layout seo={seo.home}>
       {/* need to fix resize - down */}
       <section className="h-without-navbar grid grid-cols-1 pt-10 max-w-screen-desktop mx-auto md:pt-32 px-6 md:px-12">
         <div className="flex flex-col">
@@ -124,7 +124,7 @@ export default function Home({ recentProjects, content, seo }) {
 export async function getStaticProps(context) {
   const recentProjects = await getAllRecentProjects("projects");
   const content = await getSingleMatterFile("about");
-  const seo = await getSingleMatterFile("seo");
+  const { seo } = await getSingleMatterFile("seo");
 
   return {
     props: {

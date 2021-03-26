@@ -24,7 +24,7 @@ export default function Projects({ allProjects, seo }) {
 
 export async function getStaticProps(context) {
   const allProjects = await getAllMatterFiles("projects");
-  const seo = await getSingleMatterFile("seo");
+  const { seo } = await getSingleMatterFile("seo");
 
   return {
     props: {
