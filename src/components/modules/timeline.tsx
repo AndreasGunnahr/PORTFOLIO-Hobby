@@ -24,7 +24,7 @@ export const Step: React.FC<IStep> = ({ title, description }) => (
       />
       <p className="font-extrabold text-black md:text-lg lg:text-xl">{title}</p>
     </div>
-    <p className="ml-7">{description}</p>
+    <p className="ml-7" dangerouslySetInnerHTML={{ __html: description }}></p>
   </li>
 );
 
@@ -40,18 +40,19 @@ export const Timeline = ({}) => {
         />
         <Step
           title="Fullstack Intern at Forefront Consulting"
-          description="Intern as a web developer consultant where I help building a e-commerce solutions with React (Next.js)."
+          description="Intern as a web developer where I helped build an e-commerce solution with React (Next.js). 
+          <br />Also built a structure for testing and mocking data with Angular, Jest, Cypress and Faker.js."
         />
       </ul>
       <Year text="2020" />
       <ul className="space-y-6">
         <Step
           title="Frontend Intern at Rationell Mikro Teknik"
-          description="Worked full time during the summer building a platform search service with React and Azure."
+          description="Worked full time during the summer building a search platform service with React and Azure."
         />
         <Step
           title="Fullstack Intern at Forefront Consulting"
-          description="Intern as a web developer consultant at ENWELL AB. Where I helped building out internal systems. "
+          description="Intern as a web developer consultant at ENWELL AB. Where I helped building out internal systems."
         />
       </ul>
     </section>
