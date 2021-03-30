@@ -78,8 +78,6 @@ export default function About({ seo, content }) {
 export async function getStaticProps(context) {
   const content = await getSingleMatterFile("about");
   const { seo } = await getSingleMatterFile("seo");
-
-  console.log(content);
   return {
     props: {
       content,

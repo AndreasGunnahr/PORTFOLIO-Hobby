@@ -5,7 +5,7 @@ subTitles: ["About me", "What have I worked with"]
 mainTitle: ["Fullstack Developer from Sweden", "Technologies"]
 textDescription:
   [
-    I like building complex web applications and delve into new technologies. I find the whole Javascript stack extremely exciting and I believe that's where I can offer my knowledge. I also have a deep desire to excel and continuously improve my work.",
+    I like building complex web applications and delve into new technologies. I find the whole Javascript stack extremely exciting and I believe that's where I can offer my knowledge. I also have a deep desire to excel and continuously improve my work. ",
 
     "Although I have just started my career, I would say that I have a broad knowledge of many different techniques and can contribute in many different situations in a project."
   ]
