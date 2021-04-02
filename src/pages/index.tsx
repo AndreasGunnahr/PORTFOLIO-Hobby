@@ -43,7 +43,7 @@ export default function Home({ recentProjects, content, seo }) {
             <Button
               variant="primary"
               size="lg"
-              href="/CV-2021.pdf"
+              href="/Consultant-CV-2021.pdf"
               text="Read CV"
             />
           </div>
