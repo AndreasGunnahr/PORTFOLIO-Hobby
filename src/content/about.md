@@ -14,7 +14,7 @@ boxOptions:
   [
     { title: "25", description: "Years old" },
     { title: "2", description: "Years experience" },
-    { title: "3", description: "Interships" },
+    { title: "3", description: "Internships" },
   ]
 
 techOptions:
