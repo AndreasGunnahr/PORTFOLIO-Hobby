@@ -1,5 +1,7 @@
 import Head from "next/head";
 
+import { GA_TRACKING_ID } from "lib/gtag";
+
 interface ISeo {
   title: string;
   description: string;
@@ -47,6 +49,26 @@ export const SEO: React.FC<ISeo> = ({ title, description, url }) => {
         <meta property="og:site_name" content={siteName} key="ogsitename" />
         <meta property="og:title" content={pageTitle} key="ogtitle" />
         <meta property="og:description" content={description} key="ogdesc" /> */}
+        {process.env.NODE_ENV === "production" && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_TRACKING_ID}', {
+                page_path: window.location.pathname,
+              });
+          `,
+              }}
+            />
+          </>
+        )}
       </Head>
     </>
   );
