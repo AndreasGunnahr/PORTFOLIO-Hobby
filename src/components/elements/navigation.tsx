@@ -21,7 +21,7 @@ export const Navigation: React.FC<INavigation> = ({ direction }) => {
         <Link to={"/projects"}>Projects</Link>
       </li>
       <li>
-        <a href="/Consultant-CV-2021.pdf">CV</a>
+        <a href="/cv-devbrains.pdf">CV</a>
       </li>
       <li>
         <a

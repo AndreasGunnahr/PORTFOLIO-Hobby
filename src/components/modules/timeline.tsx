@@ -11,7 +11,7 @@ interface IYear {
 }
 
 export const Year: React.FC<IYear> = ({ text }) => (
-  <h3 className="text-xl font-extrabold mt-6 mb-6 md:text-2xl">{text}</h3>
+  <h3 className="mt-6 mb-6 text-xl font-extrabold md:text-2xl">{text}</h3>
 );
 
 export const Step: React.FC<IStep> = ({ title, description }) => (
@@ -20,7 +20,7 @@ export const Step: React.FC<IStep> = ({ title, description }) => (
       <span className="sr-only">Check</span>
       <Icon
         variant="checkmark"
-        className="h-5 w-5 mr-2 flex-shrink-0 md:h-6 md:w-6"
+        className="flex-shrink-0 w-5 h-5 mr-2 md:h-6 md:w-6"
       />
       <p className="font-extrabold text-black md:text-lg lg:text-xl">{title}</p>
     </div>
@@ -30,13 +30,17 @@ export const Step: React.FC<IStep> = ({ title, description }) => (
 
 export const Timeline = ({}) => {
   return (
-    <section className="px-6 md:px-12 max-w-screen-desktop mx-auto">
+    <section className="px-6 mx-auto md:px-12 max-w-screen-desktop">
       <SectionTitle text="Timeline" />
       <Year text="2021" />
       <ul className="space-y-6">
         <Step
           title="Fullstack Developer Exam (June)"
           description="Graduated Fullstack developer program with focus on Javascript from Nackademin."
+        />
+        <Step
+          title="Consultant employment"
+          description="Got a permanent job as a consultant at DevBrains."
         />
         <Step
           title="Fullstack Intern at Forefront Consulting"
